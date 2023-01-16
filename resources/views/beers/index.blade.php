@@ -5,6 +5,7 @@
         <div class="row py-3">
             <h1>Lista Birre</h1>
             <div class="col py-5">
+                <a class="btn btn-info" href="{{route('beers.create')}}">Crea birra</a>
                 <table class="table ">
                     <thead>
                       <tr>
