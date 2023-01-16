@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\BeerRequest;
 use App\Models\Beer;
 use Illuminate\Http\Request;
 use Spatie\FlareClient\View;
@@ -37,7 +38,7 @@ class BeerController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BeerRequest $request)
     {
         $form_data = $request->all();
         $form_data['slug'] = Beer::generateSlug($form_data['name']);
