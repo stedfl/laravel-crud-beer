@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Beer;
 use Illuminate\Http\Request;
+use Spatie\FlareClient\View;
 
 class BeerController extends Controller
 {
@@ -49,7 +50,7 @@ class BeerController extends Controller
      */
     public function show(Beer $beer)
     {
-        //
+        return view('beers.show', compact('beer'));
     }
 
     /**

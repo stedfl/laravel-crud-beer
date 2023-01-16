@@ -22,7 +22,7 @@
                                 <td>{{$beer->name}}</td>
                                 <td>&euro; {{number_format($beer->price,2, ',','.')}}</td>
                                 <td>
-                                    <a href="#"><i class="fa-solid fa-eye"></i></a>
+                                    <a href="{{route('beers.show', $beer)}}"><i class="fa-solid fa-eye"></i></a>
                                     <a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
                                     <a href="#"><i class="fa-solid fa-trash"></i></a>
                                 </td>
